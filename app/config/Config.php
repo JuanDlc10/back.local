@@ -104,7 +104,7 @@ class Config
         self::iniciarSesion();
         $_SESSION = array();
         session_destroy();
-        Config::redirigir('/login');
+        Config::redirigir('/');
     }
 }
 /* Ejemplo de como se usa para redireccion <?=redireccion('login') ?> */

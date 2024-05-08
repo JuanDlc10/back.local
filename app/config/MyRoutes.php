@@ -7,7 +7,7 @@ use config\Config;
 require_once realpath('./vendor/autoload.php');
 $router = new Config;
 
-$router->get("/login", ['Login', 'index']);
+$router->get("/", ['Login', 'index']);
 $router->get("/sigin", ['Login', 'sigin']);
 $router->post("/validarLogin", ['Login', 'verificar_login']);
 $router->post("/validarRegistro", ['Sigin', 'verificar_login']);
@@ -19,7 +19,6 @@ $router->post("/agregarUsuario", ['Usuarios', 'agregar']);
 $router->get("/editarView", ['Usuarios', 'editar_view']);
 $router->post("/editarUsuario", ['Usuarios', 'editar_usuario']);
 $router->get("/eliminarUsuario", ['Usuarios', 'eliminar']);
-
 
 $router->get("/inicio", ['Inicio', 'index']);
 $router->get("/test", ['Test', 'index']);

@@ -17,7 +17,7 @@ class Sigin {
                 $usuario = new TablaLogin;
                 $datos = $usuario->insercion(['email'=>$email,'password'=>$hashedPassword]);
                 if ($datos) {
-                    $config->redirigir('/login');
+                    $config->redirigir('/');
 
                 } else {
                     echo json_encode(["error" => "Nombre de usuario o contraseña incorrectos"]);
